@@ -2,7 +2,6 @@ import Navbar from "@/components/Navbar/Navbar";
 import "./globals.css";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import ThemeRegistry from "./ThemeRegistery";
 
 const myLocal = localFont({
   src: "../fonts/norwester.otf",
@@ -21,7 +20,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={myLocal.className}>
-        <ThemeRegistry options={{ key: "mui" }}>{children}</ThemeRegistry>
+        {/* <Navbar /> */}
+        {children}
       </body>
     </html>
   );
