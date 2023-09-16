@@ -1,2 +1,2 @@
 ### Resources
-- https://www.wpgraphql.com/docs/connections
+GraphQL connections - https://www.wpgraphql.com/docs/connections
