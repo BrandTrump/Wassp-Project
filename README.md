@@ -5,4 +5,4 @@
 
 ### Learnings
 - ACF Repeater PRO feature could possibly be used for news articles.
-- How to setup Apollo client using Nextjs 13 and the app router.
+- How to setup the Apollo client using Nextjs 13 and the app router.
