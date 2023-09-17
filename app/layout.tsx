@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar/Navbar";
 import "./globals.css";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import ApolloWrapper from "@/lib/apollo-wrapper";
 
 const myLocal = localFont({
   src: "../fonts/norwester.otf",
@@ -20,8 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={myLocal.className}>
-        {/* <Navbar /> */}
-        {children}
+        <ApolloWrapper>{children}</ApolloWrapper>
       </body>
     </html>
   );
