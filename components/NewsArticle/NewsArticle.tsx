@@ -1,6 +1,6 @@
 "use client";
 
-// export const dynamic = "force-dynamic";
+export const dynamic = "force-dynamic";
 
 import { gql } from "@apollo/client";
 import { useSuspenseQuery } from "@apollo/experimental-nextjs-app-support/ssr";
@@ -31,7 +31,7 @@ const query = gql`
 function NewsArticle() {
   const { data }: { data: NewsData } = useSuspenseQuery(query);
   return (
-    <article>
+    <article className={styles.articlesContainer}>
       {data.posts.nodes.map((article: NewsArticle, i: number) => (
         <Box
           key={i}
@@ -51,7 +51,7 @@ function NewsArticle() {
               <Link href={article.latestNews.newsLink.url}>View</Link>
               <svg
                 width="29"
-                height="30"
+                height="29"
                 viewBox="0 0 29 29"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
