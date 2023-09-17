@@ -11,6 +11,8 @@ html {
 body {
   margin: 0;
   color: white;
+  font-family: var(--font-norwester);
+  background-color: rgb(4 29 47);
 }
 
 a {
@@ -30,10 +32,4 @@ a {
   font-style: normal;
   font-weight: 500;
   font-stretch: normal;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
 }
