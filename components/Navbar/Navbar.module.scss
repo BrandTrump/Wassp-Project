@@ -1,0 +1,40 @@
+.headerContainer {
+  width: 100%;
+  top: 0;
+  z-index: 999;
+  position: fixed;
+}
+
+.headerWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3em 0em;
+  padding-left: 1.5em;
+}
+
+.logo {
+  position: relative;
+  width: 10.3em;
+  height: 1.8em;
+}
+
+.navigationLinks {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+@media screen and (min-width: 1560px) {
+  .headerWrapper {
+    padding-left: 0em;
+  }
+
+  .logo {
+    min-width: 10.3em;
+    min-height: 1.8em;
+  }
+}
