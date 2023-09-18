@@ -30,18 +30,20 @@ function LatestNews() {
   return (
     <section className={styles.sectionContainer}>
       <Container maxWidth="xl" disableGutters>
-        <div className={styles.sectionTitle}>
-          <h2>
-            05<span>Latest News</span>
-          </h2>
-        </div>
+        <div className={styles.newsWrapper}>
+          <div className={styles.sectionTitle}>
+            <h2>
+              05<span>Latest News</span>
+            </h2>
+          </div>
 
-        <NewsArticle />
+          <NewsArticle />
+        </div>
 
         <div className={styles.wrapper}>
           <div className={styles.imagesContainer}>
-            {images.map((src) => (
-              <>
+            {images.map((src, i) => (
+              <div key={i}>
                 <Image
                   src={src.img}
                   alt="news image"
@@ -50,7 +52,7 @@ function LatestNews() {
                   priority
                   style={{ borderRadius: ".5em" }}
                 />
-              </>
+              </div>
             ))}
           </div>
         </div>
