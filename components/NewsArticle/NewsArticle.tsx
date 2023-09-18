@@ -35,7 +35,11 @@ function NewsArticle() {
       {data.posts.nodes.map((article: NewsArticle, i: number) => (
         <Box
           key={i}
-          sx={{ p: 2, border: "0.05em solid white", borderRadius: "0.3em" }}
+          sx={{
+            p: 2,
+            border: "0.05em solid rgba(255, 255, 255, 0.589)",
+            borderRadius: "0.3em",
+          }}
           id={styles.boxContainer}
         >
           <div id={styles.imageContainer}>
