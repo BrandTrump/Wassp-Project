@@ -1,0 +1,46 @@
+.sectionContainer {
+  padding: 12em 1.5em 0;
+}
+
+.sectionTitle {
+  text-transform: uppercase;
+
+  h2 {
+    display: inline-flex;
+    gap: 5.2em;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 0;
+  }
+}
+
+.testimonialQuote {
+  padding-top: 3em;
+  h1 {
+    font-size: 3rem;
+    font-weight: 400;
+    margin: 0;
+    padding-bottom: 3rem;
+  }
+
+  .quotation {
+    display: none;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+    font-family: var(--font-neue);
+    font-weight: 450;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .testimonialQuote {
+    .quotation {
+      display: unset;
+    }
+  }
+}
