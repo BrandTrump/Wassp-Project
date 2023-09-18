@@ -1,0 +1,25 @@
+.sectionContainer {
+  margin-top: 12em;
+  padding: 0 1.5em;
+}
+
+.sectionTitle {
+  text-transform: uppercase;
+  margin-bottom: 3em;
+
+  h2 {
+    display: inline-flex;
+    gap: 5.2em;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 0;
+  }
+}
+
+.wrapper {
+  overflow-x: auto;
+  .imagesContainer {
+    display: inline-flex;
+    gap: 2em;
+  }
+}
