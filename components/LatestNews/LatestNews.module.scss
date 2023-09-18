@@ -17,14 +17,13 @@
 }
 
 .wrapper {
-  overflow-x: auto;
+  overflow-x: hidden;
 }
 
 .imagesContainer {
   display: inline-flex;
   gap: 2em;
   position: relative;
-  //   border: 2px solid salmon;
 
   img {
     z-index: -10;

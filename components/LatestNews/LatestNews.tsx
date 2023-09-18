@@ -47,8 +47,8 @@ function LatestNews() {
                 <Image
                   src={src.img}
                   alt="news image"
-                  width={100}
-                  height={100}
+                  width={125}
+                  height={125}
                   priority
                   style={{ borderRadius: ".5em" }}
                 />
