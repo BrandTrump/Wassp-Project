@@ -38,3 +38,4 @@ box-shadow: 0 2em 2em 0 rgb(4 29 47) inset;
 
 ### Challenges 
 - Adding advanced custom fields post types to graphql
+- 500 Internal Server Error, possibly caused by experimental apollo package or incorrect setup.
