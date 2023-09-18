@@ -7,7 +7,12 @@ type ButtonProps = {
 
 function CallToActionButton({ name, href }: ButtonProps) {
   return (
-    <Button variant="outlined" color="inherit" href={href} sx={{ gap: 2 }}>
+    <Button
+      variant="outlined"
+      color="inherit"
+      href={href}
+      sx={{ gap: 2, padding: 0, margin: 0 }}
+    >
       {name}
       <svg
         width="29"
