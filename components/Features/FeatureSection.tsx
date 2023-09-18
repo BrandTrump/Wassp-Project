@@ -59,7 +59,7 @@ const features = [
     number: "08",
     title: "Multiple WASSP Transducers",
     content:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat, ipsum.",
+      "Lorem ipsum dolor sit amet consectetur. Arcu commodo nibh elementum facilisis tellus. Sit malesuada volutpat ut eget. Quis purus commodo enim auctor libero malesuada. Ornare facilisis pharetra tortor mi ac elementum leo sed mi. Quis dui proin mi ipsum enim.",
   },
 ];
 
@@ -74,41 +74,48 @@ function FeatureSection() {
   const selectedFeature = features.find((feature) => feature.id === selected);
 
   return (
-    <section className={styles.FeatureContainer}>
+    <section className={styles.featureContainer}>
       <Container maxWidth="xl" disableGutters>
-        <div className={styles.mobileSectionTitle}>
-          <h2>
-            03 <span>Our Capabilities</span>
-          </h2>
-        </div>
-
-        <div>
-          <div className={styles.tabsContainer}>
-            {features.map((feature) => (
-              <div
-                key={feature.id}
-                onClick={() => handleClick(feature.id)}
-                className={styles.featureTabs}
-                style={
-                  feature.id === selected
-                    ? { backgroundColor: "white", color: "rgb(4 29 47)" }
-                    : {}
-                }
-              >
-                <h2>{feature.number}</h2>
-                <h3>{feature.title}</h3>
-              </div>
-            ))}
+        <div className={styles.wrapper}>
+          <div className={styles.mobileSectionTitle}>
+            <h2>
+              03 <span>Our Capabilities</span>
+            </h2>
           </div>
-          {selectedFeature && (
-            <div className={styles.selectedFeature}>
-              <h2>{selectedFeature.number}</h2>
-              <div className={styles.featureDetails}>
-                <h1>{selectedFeature.title}</h1>
-                <p>{selectedFeature.content}</p>
-              </div>
+          <div className={styles.desktopSectionTitle}>
+            <h2>
+              03 <span>Features</span>
+            </h2>
+          </div>
+
+          <div className={styles.rightCol}>
+            <div className={styles.tabsContainer}>
+              {features.map((feature) => (
+                <div
+                  key={feature.id}
+                  onClick={() => handleClick(feature.id)}
+                  className={styles.featureTabs}
+                  style={
+                    feature.id === selected
+                      ? { backgroundColor: "white", color: "rgb(4 29 47)" }
+                      : {}
+                  }
+                >
+                  <h2>{feature.number}</h2>
+                  <h3>{feature.title}</h3>
+                </div>
+              ))}
             </div>
-          )}
+            {selectedFeature && (
+              <div className={styles.selectedFeature}>
+                <h2>{selectedFeature.number}</h2>
+                <div className={styles.featureDetails}>
+                  <h1>{selectedFeature.title}</h1>
+                  <p>{selectedFeature.content}</p>
+                </div>
+              </div>
+            )}
+          </div>
         </div>
 
         <div className={styles.companiesContainer}>

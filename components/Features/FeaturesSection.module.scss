@@ -1,10 +1,11 @@
-.FeatureContainer {
-  padding: 12em 1.5em 0 1.5em;
+.featureContainer {
+  padding: 0 1.5em;
+  margin-top: 12em;
 }
 
 .mobileSectionTitle {
   text-transform: uppercase;
-
+  display: unset;
   h2 {
     display: inline-flex;
     gap: 5.2em;
@@ -12,6 +13,10 @@
     font-weight: 400;
     margin: 0;
   }
+}
+
+.desktopSectionTitle {
+  display: none;
 }
 
 .tabsContainer {
@@ -77,8 +82,8 @@
 
 .companiesContainer {
   margin-top: 5.4em;
-  border-top: 1px solid white;
-  border-bottom: 1px solid white;
+  border-top: 0.05em solid rgba(255, 255, 255, 0.589);
+  border-bottom: 0.05em solid rgba(255, 255, 255, 0.589);
   display: flex;
   white-space: nowrap;
   gap: 2em;
@@ -95,7 +100,7 @@
   }
 
   .companyLogoContainer {
-    border: 1px solid white;
+    border: 1px solid rgba(255, 255, 255, 0.589);
     width: fit-content;
     padding: 0 2em;
     border-radius: 3em;
@@ -104,5 +109,77 @@
       width: 7em;
       height: 4em;
     }
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .featureContainer {
+    margin-top: 24em;
+  }
+
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .rightCol {
+    max-width: 60%;
+  }
+
+  .mobileSectionTitle {
+    display: none;
+  }
+
+  .desktopSectionTitle {
+    text-transform: uppercase;
+    display: unset;
+
+    h2 {
+      display: inline-flex;
+      gap: 5.2em;
+      font-size: 1.4rem;
+      font-weight: 400;
+      margin: 0;
+    }
+  }
+
+  .tabsContainer {
+    padding-top: 0;
+    max-width: 100%;
+    overflow-x: unset;
+    flex-wrap: wrap;
+  }
+
+  .featureTabs {
+    border: 0.05em solid white;
+
+    h3 {
+      font-size: 1.4rem;
+    }
+  }
+
+  .featuredCompany {
+    gap: 2em;
+    h1 {
+      font-weight: 400;
+      font-size: 6rem;
+    }
+  }
+
+  .selectedFeature {
+    h2 {
+      font-size: 2.4rem;
+    }
+    h1 {
+      font-size: 6rem;
+    }
+    p {
+      font-size: 1.6rem;
+      max-width: 87%;
+    }
+  }
+
+  .companiesContainer {
+    margin-top: 29.3em;
   }
 }
