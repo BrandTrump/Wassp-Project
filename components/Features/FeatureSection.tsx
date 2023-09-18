@@ -2,6 +2,7 @@
 import { useState } from "react";
 import styles from "./FeaturesSection.module.scss";
 import Image from "next/image";
+import { Container } from "@mui/material";
 
 const features = [
   {
@@ -74,67 +75,69 @@ function FeatureSection() {
 
   return (
     <section className={styles.FeatureContainer}>
-      <div className={styles.mobileSectionTitle}>
-        <h2>
-          03 <span>Our Capabilities</span>
-        </h2>
-      </div>
+      <Container maxWidth="xl" disableGutters>
+        <div className={styles.mobileSectionTitle}>
+          <h2>
+            03 <span>Our Capabilities</span>
+          </h2>
+        </div>
 
-      <div>
-        <div className={styles.tabsContainer}>
-          {features.map((feature) => (
-            <div
-              key={feature.id}
-              onClick={() => handleClick(feature.id)}
-              className={styles.featureTabs}
-              style={
-                feature.id === selected
-                  ? { backgroundColor: "white", color: "rgb(4 29 47)" }
-                  : {}
-              }
-            >
-              <h2>{feature.number}</h2>
-              <h3>{feature.title}</h3>
-            </div>
-          ))}
-        </div>
-        {selectedFeature && (
-          <div className={styles.selectedFeature}>
-            <h2>{selectedFeature.number}</h2>
-            <div className={styles.featureDetails}>
-              <h1>{selectedFeature.title}</h1>
-              <p>{selectedFeature.content}</p>
-            </div>
+        <div>
+          <div className={styles.tabsContainer}>
+            {features.map((feature) => (
+              <div
+                key={feature.id}
+                onClick={() => handleClick(feature.id)}
+                className={styles.featureTabs}
+                style={
+                  feature.id === selected
+                    ? { backgroundColor: "white", color: "rgb(4 29 47)" }
+                    : {}
+                }
+              >
+                <h2>{feature.number}</h2>
+                <h3>{feature.title}</h3>
+              </div>
+            ))}
           </div>
-        )}
-      </div>
+          {selectedFeature && (
+            <div className={styles.selectedFeature}>
+              <h2>{selectedFeature.number}</h2>
+              <div className={styles.featureDetails}>
+                <h1>{selectedFeature.title}</h1>
+                <p>{selectedFeature.content}</p>
+              </div>
+            </div>
+          )}
+        </div>
 
-      <div className={styles.companiesContainer}>
-        <div className={styles.featuredCompany}>
-          <h1>GPA SEABOATS</h1>
-          <div className={styles.companyLogoContainer}>
-            <div className={styles.companyLogo}>
-              <Image src={"/Seabots.svg"} alt="company logo" fill />
+        <div className={styles.companiesContainer}>
+          <div className={styles.featuredCompany}>
+            <h1>GPA SEABOATS</h1>
+            <div className={styles.companyLogoContainer}>
+              <div className={styles.companyLogo}>
+                <Image src={"/Seabots.svg"} alt="company logo" fill />
+              </div>
+            </div>
+          </div>
+          <div className={styles.featuredCompany}>
+            <h1>Hemisphere</h1>
+            <div className={styles.companyLogoContainer}>
+              <div className={styles.companyLogo}>
+                <Image src={"/Hemisphere.svg"} alt="company logo" fill />
+              </div>
+            </div>
+          </div>
+          <div className={styles.featuredCompany}>
+            <h1>Sbg Systems</h1>
+            <div className={styles.companyLogoContainer}>
+              <div className={styles.companyLogo}>
+                <Image src={"/SbgSystems.svg"} alt="company logo" fill />
+              </div>
             </div>
           </div>
         </div>
-        <div className={styles.featuredCompany}>
-          <h1>Hemisphere</h1>
-          <div className={styles.companyLogoContainer}>
-            <div className={styles.companyLogo}>
-              <Image src={"/Hemisphere.svg"} alt="company logo" fill />
-            </div>
-          </div>
-        </div>
-        <div className={styles.featuredCompany}>
-          <h1>Sbg Systems</h1>
-          <div className={styles.companyLogoContainer}>
-            <div className={styles.companyLogo}>
-              <Image src={"/SbgSystems.svg"} alt="company logo" fill />
-            </div>
-          </div>
-        </div>
-      </div>
+      </Container>
     </section>
   );
 }
