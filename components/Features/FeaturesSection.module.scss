@@ -1,0 +1,109 @@
+.FeatureContainer {
+  padding: 12em 1.5em 0 1.5em;
+}
+
+.mobileSectionTitle {
+  text-transform: uppercase;
+
+  h2 {
+    display: inline-flex;
+    gap: 5.2em;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 0;
+  }
+}
+
+.tabsContainer {
+  display: flex;
+  gap: 1em;
+  padding-top: 3em;
+  overflow-x: auto;
+}
+
+.featureTabs {
+  display: flex;
+  white-space: nowrap;
+  gap: 1em;
+  border: 1px solid white;
+  align-items: center;
+  padding: 1rem 3rem;
+  border-radius: 4em;
+  cursor: pointer;
+
+  h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+  h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-family: var(--font-neue);
+    font-weight: 450;
+  }
+}
+
+.selectedFeature {
+  margin-top: 3rem;
+
+  h2 {
+    font-weight: 450;
+    font-family: var(--font-neue);
+    font-size: 1.6rem;
+  }
+}
+
+.featureDetails {
+  padding-bottom: 5em;
+  background-image: url("../../public/Layers2.svg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  h1 {
+    font-size: 3rem;
+    font-weight: 450;
+    font-family: var(--font-neue);
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.4rem;
+    font-weight: 450;
+    font-family: var(--font-neue);
+    margin: 0;
+  }
+}
+
+.companiesContainer {
+  margin-top: 5.4em;
+  margin-bottom: 4em;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  display: flex;
+  white-space: nowrap;
+  gap: 2em;
+  overflow-x: hidden;
+}
+
+.featuredCompany {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  h1 {
+    font-weight: 400;
+    font-size: 2.4rem;
+  }
+
+  .companyLogoContainer {
+    border: 1px solid white;
+    width: fit-content;
+    padding: 0 2em;
+    border-radius: 3em;
+    .companyLogo {
+      position: relative;
+      width: 7em;
+      height: 4em;
+    }
+  }
+}
