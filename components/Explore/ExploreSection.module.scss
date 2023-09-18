@@ -1,13 +1,32 @@
 .exploreBackground {
-  background: rgba(0, 0, 0, 0.35) url("/images/02.jpg");
+  background: rgba(0, 0, 0, 0.2) url("/images/02.jpg");
   background-position: center;
   background-size: cover;
   background-blend-mode: darken;
   max-width: 100%;
-  z-index: -10;
   height: 78.6em;
   padding-bottom: 1em;
-  box-shadow: 0 2em 2em 0 rgb(4 29 47) inset;
+  position: relative;
+}
+
+.exploreBackground::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 15em;
+  background: linear-gradient(to bottom, #031729, transparent);
+}
+
+.exploreBackground::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 15em;
+  background: linear-gradient(to top, #031325, transparent);
 }
 
 .exploreSection {
@@ -19,6 +38,8 @@
 }
 
 .exploreTitle {
+  padding-top: 2em;
+  z-index: 2;
   h1 {
     font-size: 4.5rem;
     text-transform: uppercase;
@@ -49,6 +70,7 @@
 }
 
 .exploreDetails {
+  z-index: 2;
   h2 {
     font-size: 1.6rem;
     text-transform: uppercase;
