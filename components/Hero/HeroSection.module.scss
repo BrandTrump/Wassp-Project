@@ -1,12 +1,23 @@
 .heroBackground {
-  background: rgba(0, 0, 0, 0.6) url("/images/01.jpg");
+  background: rgba(0, 0, 0, 0.35) url("/images/01.jpg");
   background-position: center;
   background-size: cover;
   background-blend-mode: darken;
   max-width: 100%;
   z-index: -10;
-  padding: 10em 1.5em;
-  box-shadow: 0 -3em 3em rgb(4 29 47) inset;
+  padding: 10em 1.5em 0;
+  max-height: 68.6em;
+  position: relative;
+}
+
+.heroBackground::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50em;
+  background: linear-gradient(to top, #04192b, transparent);
 }
 
 .heroContainer {
@@ -18,10 +29,7 @@
 }
 
 .heroTitle {
-  color: white;
-  font-size: 4.5rem;
   text-transform: uppercase;
-  text-wrap: wrap;
 
   h2 {
     font-size: 1.6rem;
@@ -43,6 +51,7 @@
   flex-direction: column;
   gap: 3.1em;
   max-width: 70%;
+  z-index: 22;
   p {
     font-family: var(--font-neue);
     font-size: 1.4rem;
@@ -63,29 +72,34 @@
 }
 
 @media screen and (min-width: 960px) {
-  // .heroContainer {
-  //   align-items: flex-end;
-  // }
-
+  .heroBackground {
+    padding-top: 17em;
+  }
   .heroTitle {
     h2 {
       font-size: 1.6rem;
       margin: 0;
-      line-height: 1.6rem;
+      line-height: 1rem;
       font-weight: 400;
     }
 
     h1 {
       font-size: 6rem;
-      padding-top: 1.5rem;
+      padding-top: 1rem;
       max-width: 50%;
+      line-height: 6.8rem;
     }
   }
   .heroCallToAction {
-    min-width: 70%;
+    min-width: 100%;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
-    // border: 2px solid lawngreen;
+    gap: 42rem;
+
+    p {
+      width: 16%;
+      font-size: 1.6rem;
+    }
   }
 }
