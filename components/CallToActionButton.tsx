@@ -2,11 +2,12 @@ import Button from "@mui/material/Button";
 
 type ButtonProps = {
   name: string;
+  href: string;
 };
 
-function CallToActionButton({ name }: ButtonProps) {
+function CallToActionButton({ name, href }: ButtonProps) {
   return (
-    <Button variant="outlined" color="inherit" href="/contact" sx={{ gap: 2 }}>
+    <Button variant="outlined" color="inherit" href={href} sx={{ gap: 2 }}>
       {name}
       <svg
         width="29"
