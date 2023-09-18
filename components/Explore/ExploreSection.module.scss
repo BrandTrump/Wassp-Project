@@ -1,0 +1,102 @@
+.exploreBackground {
+  background: rgba(0, 0, 0, 0.35) url("/images/02.jpg");
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: darken;
+  max-width: 100%;
+  z-index: -10;
+  height: 78.6em;
+  padding-bottom: 1em;
+  box-shadow: 0 2em 2em 0 rgb(4 29 47) inset;
+}
+
+.exploreSection {
+  height: 100%;
+  padding: 0em 1.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.exploreTitle {
+  h1 {
+    font-size: 4.5rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin: 0;
+  }
+  h2 {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+
+  // Fix horizontal bar
+  hr {
+    width: 70%;
+    transform: rotate(90deg);
+    margin: 0;
+  }
+
+  .fishingSeriesTitle {
+    display: none;
+  }
+
+  .numberLine {
+    display: inline-flex;
+    gap: 2.5em;
+  }
+}
+
+.exploreDetails {
+  h2 {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-family: var(--font-neue);
+    font-weight: 450;
+    margin: 0;
+  }
+
+  p {
+    font-family: var(--font-neue);
+    font-weight: 450;
+    font-size: 1.4rem;
+  }
+
+  a {
+    font-size: 1.2rem;
+    font-family: var(--font-neue);
+    font-weight: 450;
+    text-decoration: underline;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .exploreSection {
+    flex-direction: row;
+    align-items: end;
+  }
+
+  .exploreTitle {
+    display: flex;
+    flex-direction: column-reverse;
+    h1 {
+      font-size: 10rem;
+    }
+
+    // Fix horizontal bar
+    hr {
+      display: none;
+    }
+
+    .fishingSeriesTitle {
+      display: unset;
+    }
+  }
+  .exploreDetails {
+    max-width: 28%;
+    p {
+      font-size: 1.6rem;
+    }
+  }
+}
