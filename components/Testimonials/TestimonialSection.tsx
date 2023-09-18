@@ -5,7 +5,7 @@ function TestimonialSection() {
   return (
     <section className={styles.sectionContainer}>
       <Container maxWidth="xl" disableGutters>
-        <div>
+        <div className={styles.testimonialWrapper}>
           <div className={styles.sectionTitle}>
             <h2>
               04<span>Testimonials</span>

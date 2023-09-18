@@ -1,5 +1,6 @@
 .sectionContainer {
-  padding: 12em 1.5em 0;
+  padding: 0 1.5em;
+  margin-top: 12em;
 }
 
 .sectionTitle {
@@ -38,9 +39,31 @@
 }
 
 @media screen and (min-width: 960px) {
+  .sectionContainer {
+    margin-top: 24em;
+  }
+
+  .testimonialWrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
   .testimonialQuote {
+    flex: 2;
+    padding-top: 0;
+
+    h1 {
+      font-size: 6rem;
+    }
     .quotation {
       display: unset;
+    }
+  }
+
+  .sectionTitle {
+    flex: 1;
+    h2 {
+      font-size: 1.4rem;
     }
   }
 }
