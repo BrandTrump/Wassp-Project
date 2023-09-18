@@ -26,7 +26,9 @@ function AboutSection() {
                 generate real-time 3D charts, map fish in water, and make better
                 decisions with the user-friendly advanced mode.
               </p>
-              <CallToActionButton name={"Our Story"} />
+              <div className={styles.ctaButton}>
+                <CallToActionButton name={"Our Story"} href="/our-story" />
+              </div>
             </div>
           </div>
         </section>
