@@ -2,10 +2,13 @@ import Navbar from "@/components/Navbar/Navbar";
 import "./globals.css";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import ApolloWrapper from "@/lib/apollo-wrapper";
+import ApolloWrapper from "@/lib/ApolloWrapper";
+import Nav from "@/components/Navbar/Nav";
+import Footer from "@/components/Footer/Footer";
 
 const myLocal = localFont({
-  src: "../fonts/norwester.otf",
+  src: "./norwester.otf",
+  variable: "--font-norwester",
 });
 
 export const metadata: Metadata = {
@@ -20,8 +23,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={myLocal.className}>
-        <ApolloWrapper>{children}</ApolloWrapper>
+      <body className={myLocal.variable}>
+        <ApolloWrapper>
+          {/* <Navbar /> */}
+          <Nav />
+          {children}
+          <Footer />
+        </ApolloWrapper>
       </body>
     </html>
   );
