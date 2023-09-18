@@ -13,7 +13,29 @@
 box-shadow: 0 2em 2em 0 rgb(4 29 47) inset;
 ```
 - How to adjust the size of an svg & change the color using props
+- Found a better method of getting a blurred image border effect using the before and after pseudo selectors
+```css
+.exploreBackground::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 15em;
+  background: linear-gradient(to bottom, rgb(4 29 47), transparent);
+}
 
+.exploreBackground::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 15em;
+  background: linear-gradient(to top, rgb(4 29 47), transparent);
+}
+```
 
 ### Challenges 
 - Adding advanced custom fields post types to graphql
+- 500 Internal Server Error, possibly caused by experimental apollo package or incorrect setup.
