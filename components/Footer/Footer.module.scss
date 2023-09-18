@@ -55,6 +55,10 @@
     padding: 0;
   }
 
+  a:hover {
+    text-decoration: underline;
+  }
+
   .homeLinks {
     display: flex;
     flex-direction: column;
@@ -84,6 +88,48 @@
 
 .wrapper {
   width: 100%;
-  height: 3.6em;
   margin: 6em 0;
+}
+
+@media screen and (min-width: 960px) {
+  .footerContainer {
+    margin-top: 24em;
+  }
+
+  .footerContent {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .cta {
+    gap: 5.6em;
+    max-width: 30%;
+    h1 {
+      font-size: 2.4rem;
+    }
+
+    .newsLetterLink {
+      margin-top: 2.9em;
+      font-size: 1.6rem;
+    }
+  }
+
+  .linksWrapper {
+    margin-top: 0;
+    font-size: 1.6rem;
+    gap: 13.3em;
+
+    a {
+      margin: 0.5rem 0;
+    }
+
+    h1 {
+      font-size: 1.6rem;
+      margin: 0.5rem 0;
+    }
+  }
+
+  .wrapper {
+    margin-top: 9.6em;
+  }
 }
