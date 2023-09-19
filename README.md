@@ -1,5 +1,11 @@
-### Links
-- Live Site URL: [Sunnyside Agency Landing Page](https://sunnyside-agency-landing-page-brandtrump.vercel.app/)
+# Inter Developer Test
+
+### The challenge
+Build a home page using Next.js with TypeScript while accurately following the provided design
+file.
+
+### Solution
+- Preview Site URL: https://wassp-multibeam-brandtrump.vercel.app/
 
 ## My process
 
