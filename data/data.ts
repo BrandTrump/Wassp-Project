@@ -56,3 +56,10 @@ export const features = [
       "Lorem ipsum dolor sit amet consectetur. Arcu commodo nibh elementum facilisis tellus. Sit malesuada volutpat ut eget. Quis purus commodo enim auctor libero malesuada. Ornare facilisis pharetra tortor mi ac elementum leo sed mi. Quis dui proin mi ipsum enim.",
   },
 ];
+
+export const featuredCompany = [
+  { name: "GPA SEABOATS", src: "/Seabots.svg" },
+  { name: "Hemisphere", src: "/Hemisphere.svg" },
+  { name: "Sbg Systems", src: "/SbgSystems.svg" },
+  { name: "GPA SEABOATS", src: "/Seabots.svg" },
+];
