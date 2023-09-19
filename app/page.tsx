@@ -1,4 +1,3 @@
-import styles from "./page.module.css";
 import HeroSection from "@/components/Hero/HeroSection";
 import AboutSection from "@/components/About/AboutSection";
 import ExploreSection from "@/components/Explore/ExploreSection";
@@ -8,7 +7,7 @@ import LatestNews from "@/components/LatestNews/LatestNews";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
+    <main>
       <HeroSection />
       <AboutSection />
       <ExploreSection />
