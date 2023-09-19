@@ -4,7 +4,7 @@ export const features = [
     number: "01",
     title: "High Resolution Chirp Sounder",
     content:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat, ipsum.",
+      "Lorem ipsum dolor sit amet consectetur. Arcu commodo nibh elementum facilisis tellus. Sit malesuada volutpat ut eget. Quis purus commodo enim auctor libero malesuada. Ornare facilisis pharetra tortor mi ac elementum leo sed mi. Quis dui proin mi ipsum enim.",
   },
   {
     id: 2,
