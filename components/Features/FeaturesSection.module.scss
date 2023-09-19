@@ -66,6 +66,7 @@
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+
   h1 {
     font-size: 3rem;
     font-weight: 450;
@@ -117,8 +118,8 @@
   .featureContainer {
     margin-top: 24em;
     background-image: url("../../public/Layers2.svg");
-    background-position: 30% 45%;
-    background-size: 50%;
+    background-position: 35% 40%;
+    background-size: 45em 25.9em;
     background-repeat: no-repeat;
   }
 
@@ -172,6 +173,7 @@
   }
 
   .selectedFeature {
+    max-height: 23em;
     h2 {
       font-size: 2.4rem;
     }
