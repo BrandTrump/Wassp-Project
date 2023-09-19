@@ -1,4 +1,4 @@
-# Inter Developer Test
+# Intern Developer Test
 
 ### The challenge
 Build a home page using Next.js with TypeScript while accurately following the provided design
