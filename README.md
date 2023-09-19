@@ -7,8 +7,7 @@
 
 - Semantic HTML5 markup
 - SCSS
-- [React](https://reactjs.org/) - JS library
-- [Next.js 13](https://nextjs.org/docs/getting-started) - React framework
+- Next.js 13
 - Material UI
 - Apollo
 - React Spring
