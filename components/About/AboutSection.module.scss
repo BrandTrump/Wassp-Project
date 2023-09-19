@@ -2,7 +2,7 @@
   overflow: hidden;
   background-image: url("../../public/Layers.svg");
   background-repeat: no-repeat;
-  background-position: 0em -12em;
+  background-position: 0em -7em;
   background-size: contain;
 }
 
@@ -42,7 +42,7 @@
     border-style: solid;
     border-width: 0.1rem;
     border-color: white;
-    padding: 1em 3em;
+    padding: 1.5rem 2.2rem;
     border-radius: 25em;
     background-color: transparent;
     color: white;
@@ -55,9 +55,10 @@
 
 .ctaButton {
   margin-bottom: 15em;
+  max-width: 15.4rem;
 }
 
-@media screen and (min-width: 960px) {
+@media only screen and (min-width: 960px) {
   .aboutBackground {
     background-position: 0% 90%;
     min-height: 78.6em;
@@ -96,5 +97,6 @@
 
   .ctaButton {
     margin-bottom: 24em;
+    max-width: 15.6rem;
   }
 }

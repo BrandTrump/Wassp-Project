@@ -14,7 +14,7 @@ function AboutSection() {
       <Container maxWidth="xl" disableGutters>
         <section className={styles.aboutSection}>
           <animated.div
-            style={{ opacity: scrollYProgress }}
+            // style={{ opacity: scrollYProgress }}
             className={styles.aboutWelcome}
           >
             Welcome to the world of Wassp Multibeam
