@@ -74,4 +74,30 @@
     font-size: 1.4rem;
     white-space: nowrap;
   }
+
+  .blob {
+    background-color: white;
+    height: 20em;
+    aspect-ratio: 1;
+    position: absolute;
+    left: 10%;
+    top: 65%;
+    translate: -50% -50%;
+    border-radius: 50%;
+    background: #021b30;
+    animation: rotate 20s infinite;
+    backdrop-filter: blur(50px);
+  }
+
+  .blur {
+    height: 35em;
+    aspect-ratio: 1;
+    position: absolute;
+    left: 10%;
+    top: 65%;
+    translate: -50% -50%;
+    border-radius: 50%;
+    z-index: 2;
+    backdrop-filter: blur(50px);
+  }
 }

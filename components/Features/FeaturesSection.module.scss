@@ -24,6 +24,7 @@
   gap: 1em;
   padding-top: 3em;
   overflow-x: auto;
+  scroll-behavior: smooth;
 }
 
 .featureTabs {
@@ -115,6 +116,10 @@
 @media screen and (min-width: 960px) {
   .featureContainer {
     margin-top: 24em;
+    background-image: url("../../public/Layers2.svg");
+    background-position: 30% 45%;
+    background-size: 50%;
+    background-repeat: no-repeat;
   }
 
   .wrapper {
@@ -181,5 +186,9 @@
 
   .companiesContainer {
     margin-top: 29.3em;
+  }
+
+  .featureDetails {
+    background-image: none;
   }
 }

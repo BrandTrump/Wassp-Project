@@ -39,6 +39,7 @@ function NewsArticle() {
             p: 2,
             border: "0.05em solid rgba(255, 255, 255, 0.589)",
             borderRadius: "0.3em",
+            zIndex: 30,
           }}
           id={styles.boxContainer}
         >

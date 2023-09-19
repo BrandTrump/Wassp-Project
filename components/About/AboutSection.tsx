@@ -1,16 +1,24 @@
-import { Button, Container } from "@mui/material";
+"use client";
+import { Container } from "@mui/material";
 import styles from "./AboutSection.module.scss";
-import Image from "next/image";
 import CallToActionButton from "../CallToActionButton";
+import { useScroll, animated } from "@react-spring/web";
+import React from "react";
 
 function AboutSection() {
+  const containerRef = React.useRef<HTMLDivElement>(null!);
+
+  const { scrollYProgress } = useScroll();
   return (
     <div className={styles.aboutBackground}>
       <Container maxWidth="xl" disableGutters>
         <section className={styles.aboutSection}>
-          <h1 className={styles.aboutWelcome}>
+          <animated.div
+            style={{ opacity: scrollYProgress }}
+            className={styles.aboutWelcome}
+          >
             Welcome to the world of Wassp Multibeam
-          </h1>
+          </animated.div>
           <div className={styles.infoContainer}>
             <div className={styles.sectionNumber}>
               <h2>

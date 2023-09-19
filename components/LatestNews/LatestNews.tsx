@@ -29,7 +29,9 @@ const images = [
 function LatestNews() {
   return (
     <section className={styles.sectionContainer}>
-      <Container maxWidth="xl" disableGutters>
+      <Container maxWidth="xl" disableGutters sx={{ position: "relative" }}>
+        <div className={styles.blob}></div>
+        <div className={styles.blur}></div>
         <div className={styles.newsWrapper}>
           <div className={styles.sectionTitle}>
             <h2>

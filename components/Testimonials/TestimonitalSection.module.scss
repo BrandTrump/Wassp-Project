@@ -1,11 +1,13 @@
 .sectionContainer {
   padding: 0 1.5em;
   margin-top: 12em;
+
+  // overflow: hidden;
 }
 
 .sectionTitle {
   text-transform: uppercase;
-
+  z-index: 10;
   h2 {
     display: inline-flex;
     gap: 5.2em;
@@ -17,6 +19,7 @@
 
 .testimonialQuote {
   padding-top: 3em;
+  z-index: 10;
   h1 {
     font-size: 3rem;
     font-weight: 400;
@@ -66,5 +69,38 @@
     h2 {
       font-size: 1.4rem;
     }
+  }
+
+  // .blob {
+  //   background-color: white;
+  //   height: 19em;
+  //   aspect-ratio: 1;
+  //   position: absolute;
+  //   left: 50%;
+  //   top: 50%;
+  //   translate: -50% -50%;
+  //   border-radius: 50%;
+  //   background: linear-gradient(to right, aquamarine, mediumpurple);
+  //   animation: rotate 20s infinite;
+  // }
+
+  // .blur {
+  //   height: 150%;
+  //   width: 100%;
+  //   position: absolute;
+  //   z-index: 2;
+  //   backdrop-filter: blur(50px);
+  // }
+}
+
+@keyframes rotate {
+  from {
+    rotate: 0deg;
+  }
+  50% {
+    scale: 1 1.5;
+  }
+  to {
+    rotate: 360deg;
   }
 }

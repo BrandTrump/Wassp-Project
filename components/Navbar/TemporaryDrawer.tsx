@@ -37,7 +37,6 @@ export default function TemporaryDrawer() {
         height: "100%",
         color: "white",
         paddingTop: 4,
-        fontSize: "1.6rem",
       }}
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
@@ -48,7 +47,14 @@ export default function TemporaryDrawer() {
           (text, index) => (
             <ListItem key={text} disablePadding>
               <ListItemButton>
-                <ListItemText primary={text} />
+                <ListItemText
+                  primary={text}
+                  primaryTypographyProps={{
+                    fontFamily: "var(--font-neue)",
+                    fontSize: "1.4rem",
+                    fontWeight: "450",
+                  }}
+                />
               </ListItemButton>
             </ListItem>
           )
@@ -61,7 +67,10 @@ export default function TemporaryDrawer() {
     <div>
       {(["right"] as const).map((anchor) => (
         <React.Fragment key={anchor}>
-          <Button onClick={toggleDrawer(anchor, true)}>
+          <Button
+            onClick={toggleDrawer(anchor, true)}
+            sx={{ padding: 0, margin: 0 }}
+          >
             <svg
               width="25"
               height="21"

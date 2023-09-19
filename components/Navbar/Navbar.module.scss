@@ -16,7 +16,7 @@
 .logo {
   position: relative;
   width: 10.3em;
-  height: 1.8em;
+  height: 1.8rem;
 }
 
 .navigationLinks {
@@ -25,16 +25,33 @@
   color: white;
   display: flex;
   align-items: center;
-  gap: 0.5em;
+  gap: 2em;
+}
+
+.languageMenu {
+  display: none;
+}
+
+@media screen and (min-width: 960px) {
+  .logo {
+    width: 20.1em;
+    height: 3.5rem;
+  }
+
+  .navigationLinks {
+    font-size: 1.4rem;
+    gap: 3em;
+  }
+
+  .languageMenu {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+  }
 }
 
 @media screen and (min-width: 1560px) {
   .headerWrapper {
     padding-left: 0em;
-  }
-
-  .logo {
-    min-width: 10.3em;
-    min-height: 1.8em;
   }
 }

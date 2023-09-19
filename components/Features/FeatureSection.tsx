@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import React, { useState } from "react";
 import styles from "./FeaturesSection.module.scss";
 import Image from "next/image";
 import { Container } from "@mui/material";
@@ -70,7 +70,6 @@ function FeatureSection() {
     setSelected(id);
   };
 
-  // Find the selected feature based on 'selected' state
   const selectedFeature = features.find((feature) => feature.id === selected);
 
   return (
@@ -106,6 +105,7 @@ function FeatureSection() {
                 </div>
               ))}
             </div>
+
             {selectedFeature && (
               <div className={styles.selectedFeature}>
                 <h2>{selectedFeature.number}</h2>
@@ -140,6 +140,14 @@ function FeatureSection() {
             <div className={styles.companyLogoContainer}>
               <div className={styles.companyLogo}>
                 <Image src={"/SbgSystems.svg"} alt="company logo" fill />
+              </div>
+            </div>
+          </div>
+          <div className={styles.featuredCompany}>
+            <h1>GPA SEABOATS</h1>
+            <div className={styles.companyLogoContainer}>
+              <div className={styles.companyLogo}>
+                <Image src={"/Seabots.svg"} alt="company logo" fill />
               </div>
             </div>
           </div>
