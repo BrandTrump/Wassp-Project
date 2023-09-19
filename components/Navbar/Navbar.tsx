@@ -15,7 +15,6 @@ function Navbar() {
 
   const changeColorOnScroll = () => {
     window.scrollY >= 60 ? setColor(true) : setColor(false);
-    console.log(window.scrollY);
   };
 
   return (
