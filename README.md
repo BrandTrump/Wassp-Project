@@ -1,4 +1,4 @@
-# Inter Developer Test
+# Intern Developer Test
 
 ### The challenge
 Build a home page using Next.js with TypeScript while accurately following the provided design
@@ -53,6 +53,25 @@ box-shadow: 0 2em 2em 0 rgb(4 29 47) inset;
 - How to setup apollo client for use inside of server components.
 - How to use react spring for some basic animations.
 - How to customise Material UI components.
+- Changed the fetch options to disable caching in order to see my changes made in wordpress.
+```ts
+import { ApolloClient, HttpLink, InMemoryCache } from "@apollo/client";
+import {
+  NextSSRInMemoryCache,
+  NextSSRApolloClient,
+} from "@apollo/experimental-nextjs-app-support/ssr";
+import { registerApolloClient } from "@apollo/experimental-nextjs-app-support/rsc";
+
+export const { getClient } = registerApolloClient(() => {
+  return new NextSSRApolloClient({
+    cache: new NextSSRInMemoryCache(),
+    link: new HttpLink({
+      uri: process.env.NEXT_PUBLIC_WORDPRESS_GQL_URL,
+      fetchOptions: { cache: "no-store" },
+    }),
+  });
+});
+```
 
 ## Resources
 - GraphQL connections - https://www.wpgraphql.com/docs/connections
