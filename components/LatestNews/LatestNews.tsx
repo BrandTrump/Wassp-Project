@@ -26,7 +26,11 @@ const images = [
   { img: img10 },
 ];
 
-function LatestNews() {
+type NewsProps = {
+  news: NewsData;
+};
+
+function LatestNews({ news }: NewsProps) {
   return (
     <section className={styles.sectionContainer}>
       <Container maxWidth="xl" disableGutters sx={{ position: "relative" }}>
@@ -39,7 +43,7 @@ function LatestNews() {
             </h2>
           </div>
 
-          <NewsArticle />
+          <NewsArticle news={news} />
         </div>
 
         <div className={styles.wrapper}>

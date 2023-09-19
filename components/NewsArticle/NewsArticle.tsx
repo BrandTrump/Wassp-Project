@@ -1,38 +1,16 @@
-"use client";
-
-export const dynamic = "force-dynamic";
-
-import { gql } from "@apollo/client";
-import { useSuspenseQuery } from "@apollo/experimental-nextjs-app-support/ssr";
 import Image from "next/image";
 import Link from "next/link";
 import Box from "@mui/material/Box";
 import styles from "./NewsArticle.module.scss";
 
-const query = gql`
-  query MyQuery {
-    posts {
-      nodes {
-        latestNews {
-          title
-          newsImage {
-            sourceUrl
-          }
-          newsLink {
-            url
-            title
-          }
-        }
-      }
-    }
-  }
-`;
+type NewsProps = {
+  news: NewsData;
+};
 
-function NewsArticle() {
-  const { data }: { data: NewsData } = useSuspenseQuery(query);
+function NewsArticle({ news }: NewsProps) {
   return (
     <article className={styles.articlesContainer}>
-      {data.posts.nodes.map((article: NewsArticle, i: number) => (
+      {news.posts.nodes.map((article: NewsArticle, i: number) => (
         <Box
           key={i}
           sx={{
