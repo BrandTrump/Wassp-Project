@@ -37,6 +37,7 @@ box-shadow: 0 2em 2em 0 rgb(4 29 47) inset;
 }
 ```
 - How to setup apollo client for use inside of server components.
+- How to use react spring for some basic animations.
 
 ### Challenges 
 - Adding advanced custom fields post types to graphql
