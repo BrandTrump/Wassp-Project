@@ -26,11 +26,11 @@ const images = [
   { img: img10 },
 ];
 
-type NewsProps = {
-  news: NewsData;
+type LatestNewsProps = {
+  news: AllLatestNewsData;
 };
 
-function LatestNews({ news }: NewsProps) {
+function LatestNews({ news }: LatestNewsProps) {
   return (
     <section className={styles.sectionContainer}>
       <Container maxWidth="xl" disableGutters sx={{ position: "relative" }}>

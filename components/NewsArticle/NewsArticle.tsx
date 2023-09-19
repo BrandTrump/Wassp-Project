@@ -4,13 +4,13 @@ import Box from "@mui/material/Box";
 import styles from "./NewsArticle.module.scss";
 
 type NewsProps = {
-  news: NewsData;
+  news: AllLatestNewsData;
 };
 
 function NewsArticle({ news }: NewsProps) {
   return (
     <article className={styles.articlesContainer}>
-      {news.posts.nodes.map((article: NewsArticle, i: number) => (
+      {news.allLatestNews.nodes.map((article: LatestNews, i: number) => (
         <Box
           key={i}
           sx={{
@@ -23,15 +23,15 @@ function NewsArticle({ news }: NewsProps) {
         >
           <div id={styles.imageContainer}>
             <Image
-              src={article.latestNews.newsImage.sourceUrl}
+              src={article.latestNewsFields.newsImage.node.sourceUrl}
               alt="news article"
               fill
             />
           </div>
           <div className={styles.articleDetails}>
-            <h1>{article.latestNews.title}</h1>
+            <h1>{article.latestNewsFields.title}</h1>
             <div className={styles.articleCta}>
-              <Link href={article.latestNews.newsLink.url}>View</Link>
+              <Link href={article.latestNewsFields.newsLink.url}>View</Link>
               <svg
                 width="29"
                 height="29"

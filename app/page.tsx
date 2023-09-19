@@ -6,6 +6,7 @@ import TestimonialSection from "@/components/Testimonials/TestimonialSection";
 import LatestNews from "@/components/LatestNews/LatestNews";
 import { getClient } from "@/apollo-client";
 import fetchNewsArticleQuery from "@/graphql/queries/fetchNewsArticles";
+import fetchTestimonial from "@/graphql/queries/fetchTestimonial";
 
 async function Home() {
   const client = getClient();
@@ -14,13 +15,17 @@ async function Home() {
     query: fetchNewsArticleQuery,
   });
 
+  const { data: testimonial } = await client.query({
+    query: fetchTestimonial,
+  });
+
   return (
     <main>
       <HeroSection />
       <AboutSection />
       <ExploreSection />
       <FeatureSection />
-      <TestimonialSection />
+      <TestimonialSection testimonial={testimonial} />
       <LatestNews news={newsArticles} />
     </main>
   );
