@@ -10,22 +10,18 @@ const socials = [
   { name: "Youtube", href: "https://www.youtube.com" },
 ];
 
-const homeLinks = [
-  { name: "Home", href: "/" },
-  { name: "Products", href: "/products" },
-  //   { name: "About ENL", href: "/about-enl" },
-  //   { name: "Multibeam Technology", href: "/multibeam-technology" },
-  { name: "News", href: "/news" },
-  { name: "Resources", href: "/resources" },
-  { name: "Contact", href: "/contact" },
-];
-
 const offices = ["Auckland - NZ", "Essex - UK"];
 
 function Footer() {
   return (
     <footer className={styles.footerContainer}>
-      <Container maxWidth="xl" disableGutters>
+      <Container
+        maxWidth="xl"
+        disableGutters
+        sx={{ position: "relative", overflow: "hidden" }}
+      >
+        <div className={styles.blob}></div>
+        <div className={styles.blur}></div>
         <section className={styles.footerContent}>
           <div className={styles.cta}>
             <h1>
@@ -43,11 +39,17 @@ function Footer() {
           <div className={styles.linksWrapper}>
             <div className={styles.leftCol}>
               <div className={styles.homeLinks}>
-                {homeLinks.map((link, i) => (
-                  <Link href={link.href} key={i}>
-                    {link.name}
-                  </Link>
-                ))}
+                <Link href={"/"}>Home</Link>
+                <Link href={"/"}>Products</Link>
+                <Link href={"/"} id={styles.desktopLink}>
+                  About ENL
+                </Link>
+                <Link href={"/"} id={styles.desktopLink}>
+                  Multibeam Technology
+                </Link>
+                <Link href={"/"}>News</Link>
+                <Link href={"/"}>Resources</Link>
+                <Link href={"/"}>Contact</Link>
               </div>
               <div className={styles.socials}>
                 {socials.map((link, i) => (
