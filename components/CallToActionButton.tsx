@@ -11,7 +11,13 @@ function CallToActionButton({ name, href }: ButtonProps) {
       variant="outlined"
       color="inherit"
       href={href}
-      sx={{ gap: 2, padding: 0, margin: 0 }}
+      sx={{
+        gap: 2,
+        padding: 0,
+        margin: 0,
+        minHeight: 0,
+        minWidth: 0,
+      }}
     >
       {name}
       <svg
