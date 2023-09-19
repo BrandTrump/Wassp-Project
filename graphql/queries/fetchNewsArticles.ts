@@ -2,17 +2,18 @@ import { gql } from "@apollo/client";
 
 const fetchNewsArticleQuery = gql`
   query MyQuery {
-    posts {
+    allLatestNews {
       nodes {
-        latestNews {
-          title
+        latestNewsFields {
           newsImage {
-            sourceUrl
+            node {
+              sourceUrl
+            }
           }
           newsLink {
             url
-            title
           }
+          title
         }
       }
     }
