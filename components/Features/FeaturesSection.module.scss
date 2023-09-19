@@ -50,6 +50,11 @@
   }
 }
 
+.featureTabs:hover {
+  background-color: rgba(255, 255, 255, 0.377);
+  transition: background-color 0.3s ease-in-out;
+}
+
 .selectedFeature {
   margin-top: 3rem;
 
@@ -99,6 +104,7 @@
   h1 {
     font-weight: 400;
     font-size: 2.4rem;
+    text-transform: uppercase;
   }
 
   .companyLogoContainer {

@@ -67,7 +67,9 @@
 
   .imagesContainer {
     justify-content: center;
-    width: 100%;
+    max-width: fit-content;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .sectionTitle h2 {

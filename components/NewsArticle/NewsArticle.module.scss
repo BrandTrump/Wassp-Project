@@ -4,11 +4,11 @@
   gap: 1em;
   overflow-x: auto;
   margin-bottom: 12rem;
-  flex-direction: row-reverse;
+  padding: 0 0.5em;
 }
 
 #boxContainer {
-  min-width: 28em;
+  min-width: 27em;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -78,9 +78,14 @@
 }
 
 @media screen and (min-width: 960px) {
+  .articlesContainer {
+    max-width: 67%;
+  }
+
   #boxContainer {
     max-width: 40.9em;
-    height: 40rem;
+    min-width: 40.9em;
+    height: 42.4em;
 
     h1 {
       font-size: 2.4rem;
