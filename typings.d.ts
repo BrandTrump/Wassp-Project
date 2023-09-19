@@ -1,25 +1,39 @@
-interface NewsImage {
+interface NewsImageNode {
   sourceUrl: string;
 }
 
 interface NewsLink {
   url: string;
+}
+
+interface LatestNewsFields {
+  newsImage: {
+    node: NewsImageNode;
+  };
+  newsLink: NewsLink;
   title: string;
 }
 
 interface LatestNews {
-  title: string;
-  newsImage: NewsImage;
-  newsLink: NewsLink;
-  fieldGroupName: string;
+  latestNewsFields: LatestNewsFields;
 }
 
-interface NewsArticle {
-  latestNews: LatestNews;
+interface AllLatestNewsData {
+  allLatestNews: {
+    nodes: LatestNews[];
+  };
 }
 
-interface NewsData {
-  posts: {
-    nodes: NewsArticle[];
+interface Testimonial {
+  testimonialFields: {
+    position: string;
+    quote: string;
+    quotedBy: string;
+  };
+}
+
+interface TestimonialsData {
+  testimonials: {
+    nodes: Testimonial[];
   };
 }
