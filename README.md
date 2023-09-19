@@ -1,10 +1,19 @@
-### Resources
-- GraphQL connections - https://www.wpgraphql.com/docs/connections
-- WPGraphQL for Advanced Custom Fields - https://github.com/wp-graphql/wp-graphql-acf
-- Using Apollo client with Nextjs 13 - https://www.apollographql.com/blog/announcement/frontend/using-apollo-client-with-next-js-13-releasing-an-official-library-to-support-the-app-router/
-- Adjusting the size of an svg & changing the color using props - https://www.reddit.com/r/reactjs/comments/1562kgx/how_to_adjust_sizecolor_of_svg_image_in_nextjs/
+### Links
+- Live Site URL: [Sunnyside Agency Landing Page](https://sunnyside-agency-landing-page-brandtrump.vercel.app/)
 
-### Learnings
+## My process
+
+### Built with
+
+- Semantic HTML5 markup
+- SCSS
+- [React](https://reactjs.org/) - JS library
+- [Next.js 13](https://nextjs.org/docs/getting-started) - React framework
+- Material UI
+- Apollo
+- React Spring
+
+## Learnings
 - ACF Repeater PRO feature could possibly be used for news articles.
 - How to setup the Apollo client using Nextjs 13 and the app router.
 - How to import a local font.
@@ -40,5 +49,8 @@ box-shadow: 0 2em 2em 0 rgb(4 29 47) inset;
 - How to use react spring for some basic animations.
 - How to customise Material UI components.
 
-### Challenges 
-- Adding advanced custom fields post types to wpgraphql.
+## Resources
+- GraphQL connections - https://www.wpgraphql.com/docs/connections
+- WPGraphQL for Advanced Custom Fields - https://github.com/wp-graphql/wp-graphql-acf
+- Using Apollo client with Nextjs 13 - https://www.apollographql.com/blog/announcement/frontend/using-apollo-client-with-next-js-13-releasing-an-official-library-to-support-the-app-router/
+- Adjusting the size of an svg & changing the color using props - https://www.reddit.com/r/reactjs/comments/1562kgx/how_to_adjust_sizecolor_of_svg_image_in_nextjs/
