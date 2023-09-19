@@ -36,6 +36,7 @@ box-shadow: 0 2em 2em 0 rgb(4 29 47) inset;
   background: linear-gradient(to top, rgb(4 29 47), transparent);
 }
 ```
+- How to setup apollo client for use inside of server components.
 
 ### Challenges 
 - Adding advanced custom fields post types to graphql
