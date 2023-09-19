@@ -1,12 +1,25 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "@/components/Navbar/Navbar.module.scss";
 import TemporaryDrawer from "./TemporaryDrawer";
 import { Container } from "@mui/material";
+import { useState } from "react";
 
 function Navbar() {
+  const [color, setColor] = useState(false);
+  const changeColorOnScroll = () => {
+    window.scrollY >= 60 ? setColor(true) : setColor(false);
+  };
+  window.addEventListener("scroll", changeColorOnScroll);
   return (
-    <header className={styles.headerContainer}>
+    <header
+      className={
+        color
+          ? `${styles.headerContainer} ${styles.headerBackground}`
+          : styles.headerContainer
+      }
+    >
       <Container maxWidth="xl" disableGutters>
         <div className={styles.headerWrapper}>
           <div className={styles.logo}>

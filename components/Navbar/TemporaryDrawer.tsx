@@ -33,7 +33,7 @@ export default function TemporaryDrawer() {
     <Box
       sx={{
         width: anchor === "top" || anchor === "bottom" ? "auto" : 250,
-        backgroundColor: "black",
+        backgroundColor: "#010f33",
         height: "100%",
         color: "white",
         paddingTop: 4,
@@ -69,7 +69,7 @@ export default function TemporaryDrawer() {
         <React.Fragment key={anchor}>
           <Button
             onClick={toggleDrawer(anchor, true)}
-            sx={{ padding: 0, margin: 0 }}
+            sx={{ minHeight: 0, minWidth: 0, padding: "0 1.5em 0 0" }}
           >
             <svg
               width="25"
