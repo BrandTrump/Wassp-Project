@@ -4,14 +4,20 @@ import Link from "next/link";
 import styles from "@/components/Navbar/Navbar.module.scss";
 import TemporaryDrawer from "./TemporaryDrawer";
 import { Container } from "@mui/material";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function Navbar() {
   const [color, setColor] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", changeColorOnScroll);
+  }, []);
+
   const changeColorOnScroll = () => {
     window.scrollY >= 60 ? setColor(true) : setColor(false);
+    console.log(window.scrollY);
   };
-  window.addEventListener("scroll", changeColorOnScroll);
+
   return (
     <header
       className={
