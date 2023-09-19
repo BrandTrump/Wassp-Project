@@ -1,9 +1,9 @@
 "use client";
 import React, { useState } from "react";
 import styles from "./FeaturesSection.module.scss";
-import Image from "next/image";
 import { Container } from "@mui/material";
-import { features } from "@/data/data";
+import { featuredCompany, features } from "@/data/data";
+import FeaturedCompany from "./FeaturedCompany";
 
 function FeatureSection() {
   const [selected, setSelected] = useState(1);
@@ -61,38 +61,11 @@ function FeatureSection() {
         </div>
 
         <div className={styles.companiesContainer}>
-          <div className={styles.featuredCompany}>
-            <h1>GPA SEABOATS</h1>
-            <div className={styles.companyLogoContainer}>
-              <div className={styles.companyLogo}>
-                <Image src={"/Seabots.svg"} alt="company logo" fill />
-              </div>
+          {featuredCompany.map((company, i) => (
+            <div key={i}>
+              <FeaturedCompany name={company.name} src={company.src} />
             </div>
-          </div>
-          <div className={styles.featuredCompany}>
-            <h1>Hemisphere</h1>
-            <div className={styles.companyLogoContainer}>
-              <div className={styles.companyLogo}>
-                <Image src={"/Hemisphere.svg"} alt="company logo" fill />
-              </div>
-            </div>
-          </div>
-          <div className={styles.featuredCompany}>
-            <h1>Sbg Systems</h1>
-            <div className={styles.companyLogoContainer}>
-              <div className={styles.companyLogo}>
-                <Image src={"/SbgSystems.svg"} alt="company logo" fill />
-              </div>
-            </div>
-          </div>
-          <div className={styles.featuredCompany}>
-            <h1>GPA SEABOATS</h1>
-            <div className={styles.companyLogoContainer}>
-              <div className={styles.companyLogo}>
-                <Image src={"/Seabots.svg"} alt="company logo" fill />
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </Container>
     </section>
