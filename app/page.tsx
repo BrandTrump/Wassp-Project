@@ -4,8 +4,16 @@ import ExploreSection from "@/components/Explore/ExploreSection";
 import FeatureSection from "@/components/Features/FeatureSection";
 import TestimonialSection from "@/components/Testimonials/TestimonialSection";
 import LatestNews from "@/components/LatestNews/LatestNews";
+import { getClient } from "@/apollo-client";
+import fetchNewsArticleQuery from "@/graphql/queries/fetchNewsArticles";
 
-export default function Home() {
+async function Home() {
+  const client = getClient();
+
+  const { data: newsArticles } = await client.query({
+    query: fetchNewsArticleQuery,
+  });
+
   return (
     <main>
       <HeroSection />
@@ -13,7 +21,9 @@ export default function Home() {
       <ExploreSection />
       <FeatureSection />
       <TestimonialSection />
-      <LatestNews />
+      <LatestNews news={newsArticles} />
     </main>
   );
 }
+
+export default Home;
