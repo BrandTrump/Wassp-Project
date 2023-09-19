@@ -25,6 +25,7 @@
   padding-top: 3em;
   overflow-x: auto;
   scroll-behavior: smooth;
+  padding-bottom: 0.5em;
 }
 
 .featureTabs {
@@ -160,6 +161,7 @@
     max-width: 100%;
     overflow-x: unset;
     flex-wrap: wrap;
+    padding-bottom: 1em;
   }
 
   .featureTabs {
@@ -199,4 +201,19 @@
   .featureDetails {
     background-image: none;
   }
+}
+
+.tabsContainer::-webkit-scrollbar {
+  width: 0.5em;
+  height: 0.8em;
+}
+
+.tabsContainer::-webkit-scrollbar-track {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 3em;
+}
+
+.tabsContainer::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 3em;
 }
