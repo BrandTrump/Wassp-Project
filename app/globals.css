@@ -13,7 +13,7 @@ body {
   color: white;
   font-family: var(--font-norwester);
   background-color: rgb(4 29 47);
-  background-image: linear-gradient(rgb(4 29 47), #01081a);
+  background-image: linear-gradient(#041d2f, #01081a);
 }
 
 a {
