@@ -11,6 +11,10 @@ function Navbar() {
 
   useEffect(() => {
     window.addEventListener("scroll", changeColorOnScroll);
+
+    return () => {
+      window.removeEventListener("scroll", changeColorOnScroll);
+    };
   }, []);
 
   const changeColorOnScroll = () => {
