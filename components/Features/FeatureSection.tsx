@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import styles from "./FeaturesSection.module.scss";
 import { Container } from "@mui/material";
-import { featuredCompany, features } from "@/data/data";
+import { featuredCompany, features } from "@/data/featureSectionData";
 import FeaturedCompany from "./FeaturedCompany";
 import { useSpring, animated } from "@react-spring/web";
 
