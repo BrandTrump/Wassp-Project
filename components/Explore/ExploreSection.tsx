@@ -22,7 +22,7 @@ function ExploreSection() {
               WASSP Multibeam finds fish and habitat over a wider area than
               single-beam systems
             </p>
-            <Link href={"/explore"}>Explore Now</Link>
+            <Link href={"/"}>Explore Now</Link>
           </div>
         </section>
       </Container>
