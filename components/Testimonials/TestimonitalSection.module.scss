@@ -1,8 +1,6 @@
 .sectionContainer {
   padding: 0 1.5em;
   margin-top: 12em;
-
-  // overflow: hidden;
 }
 
 .sectionTitle {
@@ -70,27 +68,6 @@
       font-size: 1.4rem;
     }
   }
-
-  // .blob {
-  //   background-color: white;
-  //   height: 19em;
-  //   aspect-ratio: 1;
-  //   position: absolute;
-  //   left: 50%;
-  //   top: 50%;
-  //   translate: -50% -50%;
-  //   border-radius: 50%;
-  //   background: linear-gradient(to right, aquamarine, mediumpurple);
-  //   animation: rotate 20s infinite;
-  // }
-
-  // .blur {
-  //   height: 150%;
-  //   width: 100%;
-  //   position: absolute;
-  //   z-index: 2;
-  //   backdrop-filter: blur(50px);
-  // }
 }
 
 @keyframes rotate {
