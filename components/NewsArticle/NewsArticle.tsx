@@ -26,6 +26,7 @@ function NewsArticle({ news }: NewsProps) {
               src={article.latestNewsFields.newsImage.node.sourceUrl}
               alt="news article"
               fill
+              sizes="800px"
             />
           </div>
           <div className={styles.articleDetails}>
