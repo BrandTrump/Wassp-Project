@@ -2,7 +2,7 @@
 import { Container } from "@mui/material";
 import styles from "./AboutSection.module.scss";
 import CallToActionButton from "../CallToActionButton";
-// import { useScroll, animated } from "@react-spring/web";
+import { useScroll, animated } from "@react-spring/web";
 import React from "react";
 
 type AboutSectionProps = {
@@ -10,18 +10,21 @@ type AboutSectionProps = {
 };
 
 function AboutSection({ about }: AboutSectionProps) {
-  // const containerRef = React.useRef<HTMLDivElement>(null!);
-
-  // const { scrollYProgress } = useScroll();
+  const { scrollYProgress } = useScroll();
 
   return (
     <div className={styles.aboutBackground}>
       <Container maxWidth="xl" disableGutters>
         {about.aboutContents.nodes.map((details, i: number) => (
           <section className={styles.aboutSection} key={i}>
-            <div className={styles.aboutWelcome}>
+            <animated.div
+              className={styles.aboutWelcome}
+              style={{
+                clipPath: scrollYProgress.to((val) => `circle(${val * 800}%)`),
+              }}
+            >
               {details.aboutContentFields.title}
-            </div>
+            </animated.div>
             <div className={styles.infoContainer}>
               <div className={styles.sectionNumber}>
                 <h2>
