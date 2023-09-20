@@ -21,7 +21,7 @@ Create a WordPress backend that will function as a headless CMS. And build a hom
 
 ## Learnings
 
-- ACF Repeater PRO feature could possibly be used for news articles.
+- How to create a Wordpress instance, install plugins, add new posts, create post types/custom fields using the advance custom fields plugin, and show the posts inside of the wpgraohql plugin.
 - How to setup the Apollo client using Nextjs 13 and the app router.
 - How to import a local font.
 - svh CSS unit
