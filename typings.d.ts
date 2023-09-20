@@ -37,3 +37,18 @@ interface TestimonialsData {
     nodes: Testimonial[];
   };
 }
+
+interface AboutContentFields {
+  title: string;
+  content: string;
+}
+
+interface AboutContent {
+  aboutContentFields: AboutContentFields;
+}
+
+interface AboutContents {
+  aboutContents: {
+    nodes: AboutContent[];
+  };
+}
