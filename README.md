@@ -1,4 +1,9 @@
 # Intern Developer Test
+# Set-up
+Create an .env file and paste the following:
+```
+NEXT_PUBLIC_WORDPRESS_GQL_URL="https://wasspmultibeambrandtrumpvercel.wpcomstaging.com/graphql"
+```
 
 ### The challenge
 
