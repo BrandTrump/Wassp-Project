@@ -1,17 +1,10 @@
-# Intern Developer Test
-# Set-up
-Create an .env file and paste the following:
-```
-NEXT_PUBLIC_WORDPRESS_GQL_URL="https://wasspmultibeambrandtrumpvercel.wpcomstaging.com/graphql"
-```
-
-### The challenge
+# The challenge
 
 Create a WordPress backend that will function as a headless CMS. And build a home page using Next.js with TypeScript while accurately following the provided design file.
 
 ### Solution
 
-- Preview Site URL: https://wassp-multibeam-brandtrump.vercel.app/
+- Preview Site URL:
 
 ## My process
 

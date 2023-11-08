@@ -30,7 +30,7 @@ type LatestNewsProps = {
   news: AllLatestNewsData;
 };
 
-function LatestNews({ news }: LatestNewsProps) {
+function LatestNews() {
   return (
     <section className={styles.sectionContainer}>
       <Container maxWidth="xl" disableGutters sx={{ position: "relative" }}>
@@ -43,7 +43,7 @@ function LatestNews({ news }: LatestNewsProps) {
             </h2>
           </div>
 
-          <NewsArticle news={news} />
+          <NewsArticle />
         </div>
 
         <div className={styles.wrapper}>

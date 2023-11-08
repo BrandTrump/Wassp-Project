@@ -9,38 +9,45 @@ type AboutSectionProps = {
   about: AboutContents;
 };
 
-function AboutSection({ about }: AboutSectionProps) {
+function AboutSection() {
   const { scrollYProgress } = useScroll();
 
   return (
     <div className={styles.aboutBackground}>
       <Container maxWidth="xl" disableGutters>
-        {about.aboutContents.nodes.map((details, i: number) => (
-          <section className={styles.aboutSection} key={i}>
-            <animated.div
-              className={styles.aboutWelcome}
-              style={{
-                clipPath: scrollYProgress.to((val) => `circle(${val * 800}%)`),
-              }}
-            >
-              {details.aboutContentFields.title}
-            </animated.div>
-            <div className={styles.infoContainer}>
-              <div className={styles.sectionNumber}>
-                <h2>
-                  <span>01</span>About Wassp
-                </h2>
-              </div>
+        {/* {about.aboutContents.nodes.map((details, i: number) => ( */}
+        <section className={styles.aboutSection}>
+          {/* <animated.div
+            className={styles.aboutWelcome}
+            style={{
+              clipPath: scrollYProgress.to((val) => `circle(${val * 800}%)`),
+            }}
+          > */}
+          {/* {details.aboutContentFields.title} */}
+          <div className={styles.aboutWelcome}>
+            Lorem ipsum dolor sit amet consectetur adipisicing.
+          </div>
+          {/* </animated.div> */}
+          <div className={styles.infoContainer}>
+            <div className={styles.sectionNumber}>
+              <h2>
+                <span>01</span>About Wassp
+              </h2>
+            </div>
 
-              <div className={styles.aboutInformation}>
-                <p>{details.aboutContentFields.content}</p>
-                <div className={styles.ctaButton}>
-                  <CallToActionButton name={"Our Story"} href="/our-story" />
-                </div>
+            <div className={styles.aboutInformation}>
+              {/* <p>{details.aboutContentFields.content}</p> */}
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Possimus eius delectus culpa recusandae in minima.
+              </p>
+              <div className={styles.ctaButton}>
+                <CallToActionButton name={"Our Story"} href="/our-story" />
               </div>
             </div>
-          </section>
-        ))}
+          </div>
+        </section>
+        {/* ))} */}
       </Container>
     </div>
   );

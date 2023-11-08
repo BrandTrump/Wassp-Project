@@ -7,7 +7,7 @@ type TestimonialProps = {
   testimonial: TestimonialsData;
 };
 
-function TestimonialSection({ testimonial }: TestimonialProps) {
+function TestimonialSection() {
   const [ref, springs] = useInView(
     () => ({
       from: {
@@ -35,22 +35,26 @@ function TestimonialSection({ testimonial }: TestimonialProps) {
             </h2>
           </div>
 
-          {testimonial.testimonials.nodes.map(
-            (testimonial: Testimonial, i: number) => (
-              <div className={styles.testimonialQuote} key={i}>
-                <animated.div ref={ref} style={springs}>
-                  <h1>
-                    <span className={styles.quotation}>“</span>
-                    {testimonial.testimonialFields.quote}”
-                  </h1>
-                  <h2>
-                    {testimonial.testimonialFields.quotedBy}{" "}
-                    <span>{testimonial.testimonialFields.position}</span>
-                  </h2>
-                </animated.div>
-              </div>
-            )
-          )}
+          {/* {testimonial.testimonials.nodes.map(
+            (testimonial: Testimonial, i: number) => ( */}
+          <div className={styles.testimonialQuote}>
+            <animated.div ref={ref} style={springs}>
+              <h1>
+                <span className={styles.quotation}>“</span>
+                {/* {testimonial.testimonialFields.quote}” */}
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
+                inventore ea eius unde architecto placeat.”
+              </h1>
+              <h2>
+                {/* {testimonial.testimonialFields.quotedBy}{" "} */}
+                Lorem, ipsum.{" "}
+                {/* <span>{testimonial.testimonialFields.position}</span> */}
+                <span>Lorem.</span>
+              </h2>
+            </animated.div>
+          </div>
+          {/* )
+          )} */}
         </div>
       </Container>
     </section>
