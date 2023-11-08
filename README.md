@@ -4,7 +4,7 @@ Create a WordPress backend that will function as a headless CMS. And build a hom
 
 ### Solution
 
-- Preview Site URL:
+- Preview Site URL: https://interview-project-delta.vercel.app/
 
 ## My process
 
